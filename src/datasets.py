@@ -6,7 +6,7 @@ from termcolor import cprint
 
 
 class ThingsMEGDataset(torch.utils.data.Dataset):
-    def __init__(self, split: str, data_dir: str = "data") -> None:
+    def __init__(self, split: str, data_dir: str = "data/daichi/MEG") -> None:
         super().__init__()
         
         assert split in ["train", "val", "test"], f"Invalid split: {split}"
@@ -15,6 +15,9 @@ class ThingsMEGDataset(torch.utils.data.Dataset):
         
         self.X = torch.load(os.path.join(data_dir, f"{split}_X.pt"))
         self.subject_idxs = torch.load(os.path.join(data_dir, f"{split}_subject_idxs.pt"))
+        # self.image_paths = torch.load(os.path.join(data_dir, f"{split}_image_paths.txt"))
+        with open(os.path.join(data_dir, f"{split}_image_paths.txt"), "r") as f:
+            self.image_paths = f.read().splitlines()
         
         if split in ["train", "val"]:
             self.y = torch.load(os.path.join(data_dir, f"{split}_y.pt"))

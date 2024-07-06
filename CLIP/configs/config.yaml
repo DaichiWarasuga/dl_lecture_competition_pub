@@ -1,0 +1,16 @@
+batch_size: 64
+epochs: 100
+lr: 0.0001
+weight_decay: 0.01
+
+train_device: cuda:1
+eval_device: cuda:2
+num_workers: 4
+seed: 1234
+use_wandb: False
+pretrained_model_path:
+
+data_dir: /data/daichi/MEG
+save_dir: /home/daichi/dlb/dl_lecture_competition_pub/CLIP/outputs/2024-07-06-2
+# Evaluation
+model_path: 
