@@ -1,0 +1,12 @@
+nohup: 入力を無視します
+/data/daichi/.conda/envs/dlbasics/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+  0%|          | 0/311 [00:00<?, ?it/s]  0%|          | 0/311 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/daichi/dlb/dl_lecture_competition_pub/train_bert_model_1.py", line 198, in <module>
+    main(args)
+  File "/home/daichi/dlb/dl_lecture_competition_pub/train_bert_model_1.py", line 130, in main
+    train_loss, train_acc, train_simple_acc, train_time = train(model, train_loader, optimizer, criterion, device, scaler)
+  File "/home/daichi/dlb/dl_lecture_competition_pub/train_bert_model_1.py", line 42, in train
+    question = list(question).to(device)
+AttributeError: 'list' object has no attribute 'to'

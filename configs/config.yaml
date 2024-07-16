@@ -1,0 +1,11 @@
+batch_size: 64
+epochs: 20
+lr: 0.001
+weight_decay: 0.00001
+
+device: cuda:2
+num_workers: 4
+seed: 42
+
+answer_dict_path: "/data/daichi/VQA/class_mapping.csv"
+load_model_path: "/home/daichi/dlb/dl_lecture_competition_pub/output/2024-07-16/10-47-13/models/model_4.pth"
